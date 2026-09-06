@@ -5,8 +5,8 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=corvell
-Group=corvell
+User=devel
+Group=www-data
 WorkingDirectory=/var/www/corvellimmigration.com/app
 Environment=NODE_ENV=production
 EnvironmentFile=/etc/corvellimmigration/corvellimmigration.env
