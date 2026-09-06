@@ -1,0 +1,13 @@
+.careers-page {
+    background: var(--color-surface);
+}
+
+.careers-page__intro .section-intro__description {
+    max-width: 565px;
+}
+
+@media (max-width: 767px) {
+    .careers-page__intro .section-intro__description {
+        max-width: none;
+    }
+}

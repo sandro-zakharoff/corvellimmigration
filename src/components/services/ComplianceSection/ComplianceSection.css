@@ -1,0 +1,24 @@
+.compliance-section {
+    padding-top: 80px;
+    padding-right: 0;
+    padding-bottom: 118px;
+    padding-left: 0;
+}
+
+.compliance-section__list {
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .compliance-section {
+        padding-top: 60px;
+        padding-right: 0;
+        padding-bottom: 60px;
+        padding-left: 0;
+    }
+
+    .compliance-section__list {
+        margin-top: 40px;
+    }
+
+}

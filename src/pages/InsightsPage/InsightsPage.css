@@ -1,0 +1,15 @@
+.insights-page__intro .page-intro__heading {
+    max-width: 632px;
+}
+
+.insights-page__intro .section-intro__description {
+    max-width: 623px;
+    margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+    .insights-page__intro .page-intro__heading,
+    .insights-page__intro .section-intro__description {
+        max-width: none;
+    }
+}

@@ -1,0 +1,86 @@
+.page-intro {
+    padding-top: 80px;
+    padding-right: 0;
+    padding-bottom: 80px;
+    padding-left: 0;
+}
+
+.page-intro .page-intro__inner {
+    width: min(1136px, calc(100% - (var(--page-gutter) * 2)));
+}
+
+.page-intro__heading {
+    max-width: none;
+}
+
+.page-intro__heading .section-intro__title {
+    font-size: 64px;
+    line-height: 110%;
+}
+
+.page-intro .section-intro__description {
+    max-width: 638px;
+    margin-top: 24px;
+}
+
+.page-intro--compact {
+    padding-top: 72px;
+    padding-right: 0;
+    padding-bottom: 24px;
+    padding-left: 0;
+}
+
+.page-intro--compact .page-intro__inner {
+    width: min(var(--container-width), calc(100% - (var(--page-gutter) * 2)));
+}
+
+.page-intro--compact .page-intro__heading {
+    max-width: 594px;
+}
+
+.page-intro--compact .section-intro__eyebrow {
+    margin-bottom: 4px;
+}
+
+.page-intro--compact .section-intro__title {
+    letter-spacing: -1.28px;
+    line-height: 105%;
+}
+
+.page-intro--compact .section-intro__description {
+    color: var(--color-text-body);
+}
+
+@media (max-width: 767px) {
+    .page-intro {
+        padding-top: 60px;
+        padding-right: 0;
+        padding-bottom: 60px;
+        padding-left: 0;
+    }
+
+    .page-intro__heading .section-intro__title {
+        font-size: 40px;
+    }
+
+    .page-intro--compact {
+        padding-top: 52px;
+        padding-right: 0;
+        padding-bottom: 40px;
+        padding-left: 0;
+    }
+
+    .page-intro--compact .page-intro__heading,
+    .page-intro--compact .section-intro__description {
+        max-width: none;
+    }
+
+    .page-intro--compact .section-intro__eyebrow {
+        margin-bottom: 12px;
+    }
+
+    .page-intro--compact .section-intro__title {
+        letter-spacing: 0;
+        line-height: 110%;
+    }
+}

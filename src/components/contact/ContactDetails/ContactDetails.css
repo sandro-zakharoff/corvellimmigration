@@ -1,0 +1,117 @@
+.contact-details {
+    overflow: hidden;
+    padding-top: 36px;
+    padding-right: 34px;
+    padding-bottom: 36px;
+    padding-left: 34px;
+    border-radius: var(--radius-small);
+    background: var(--color-ink);
+}
+
+.contact-details__item {
+    padding-top: 22px;
+    padding-right: 0;
+    padding-bottom: 22px;
+    padding-left: 0;
+    border-bottom: 1px solid var(--color-teal);
+}
+
+.contact-details__item--first {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.contact-details__item--office {
+    padding-bottom: 22px;
+}
+
+.contact-details__item--last {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.contact-details__label {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 12px;
+    margin-left: 0;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1.54px;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+
+.contact-details__value {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    color: var(--color-surface);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 170%;
+    text-decoration: none;
+}
+
+.contact-details__value--email {
+    border-bottom: 1px solid var(--color-teal);
+}
+
+.contact-details__value--address {
+    font-family: var(--font-sans);
+    font-size: 16px;
+}
+
+.contact-details__value--address span {
+    display: block;
+}
+
+.contact-details__map {
+    position: relative;
+    height: 180px;
+    margin-top: 19px;
+    overflow: hidden;
+    border: 1px solid var(--color-teal);
+    border-radius: var(--radius-small);
+}
+
+.contact-details__map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-details__map-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    color: var(--color-blue-light);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1.76px;
+    line-height: 160%;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+}
+
+.contact-details a:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+    .contact-details {
+        padding-top: 28px;
+        padding-right: 24px;
+        padding-bottom: 28px;
+        padding-left: 24px;
+    }
+
+    .contact-details__map-label {
+        width: calc(100% - 32px);
+        text-align: center;
+    }
+}

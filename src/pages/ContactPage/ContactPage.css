@@ -1,0 +1,13 @@
+.contact-page {
+    background: var(--color-surface);
+}
+
+.contact-page__intro .section-intro__description {
+    max-width: 546px;
+}
+
+@media (max-width: 767px) {
+    .contact-page__intro .section-intro__description {
+        max-width: none;
+    }
+}

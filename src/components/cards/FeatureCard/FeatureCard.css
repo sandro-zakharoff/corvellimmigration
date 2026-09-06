@@ -1,0 +1,21 @@
+.feature-card {
+    min-width: 0;
+}
+
+.feature-card__label,
+.feature-card__title,
+.feature-card__description {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.feature-card__label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.feature-card__title {
+    font-family: var(--font-display);
+}

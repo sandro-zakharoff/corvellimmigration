@@ -1,0 +1,199 @@
+.career-role-card {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background: var(--color-white);
+}
+
+.career-role-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding-top: 32px;
+    padding-right: 36px;
+    padding-bottom: 32px;
+    padding-left: 36px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.career-role-card__summary {
+    min-width: 0;
+}
+
+.career-role-card__title,
+.career-role-card__section-title,
+.career-role-card__overview,
+.career-role-card__application {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.career-role-card__title {
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.52px;
+    line-height: 110%;
+}
+
+.career-role-card__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.career-role-card__detail,
+.career-role-card__posted {
+    border-radius: 3px;
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.48px;
+    line-height: 160%;
+}
+
+.career-role-card__detail {
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-metrics);
+}
+
+.career-role-card__posted {
+    flex: 0 0 auto;
+    padding-top: 8px;
+    padding-right: 14px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    background: var(--color-accent);
+    letter-spacing: 0.72px;
+}
+
+.career-role-card__body {
+    padding-top: 32px;
+    padding-right: 36px;
+    padding-bottom: 36px;
+    padding-left: 36px;
+}
+
+.career-role-card__section + .career-role-card__section {
+    margin-top: 30px;
+}
+
+.career-role-card__section-title {
+    color: var(--color-blue-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1.54px;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+
+.career-role-card__overview {
+    max-width: 680px;
+    margin-top: 14px;
+    color: var(--color-text-body);
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.career-role-card__list {
+    display: grid;
+    max-width: 651px;
+    gap: 10px;
+    margin-top: 14px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.career-role-card__list-item {
+    position: relative;
+    padding-left: 22px;
+    color: var(--color-text-body);
+    font-size: 15.5px;
+    line-height: 160%;
+}
+
+.career-role-card__list-item::before {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 1px;
+    background: var(--color-accent);
+    content: "";
+}
+
+.career-role-card__application {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 15px;
+    line-height: 160%;
+}
+
+.career-role-card__application a {
+    border-bottom: 1px solid var(--color-accent);
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 160%;
+    text-decoration: none;
+}
+
+.career-role-card__application a:hover,
+.career-role-card__application a:focus-visible {
+    color: var(--color-blue-muted);
+}
+
+@media (max-width: 760px) {
+    .career-role-card__header {
+        flex-direction: column;
+        padding-top: 28px;
+        padding-right: 24px;
+        padding-bottom: 28px;
+        padding-left: 24px;
+    }
+
+    .career-role-card__body {
+        padding-top: 28px;
+        padding-right: 24px;
+        padding-bottom: 30px;
+        padding-left: 24px;
+    }
+
+    .career-role-card__posted {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .career-role-card__title {
+        font-size: 24px;
+    }
+
+    .career-role-card__detail {
+        width: 100%;
+    }
+
+    .career-role-card__application a {
+        overflow-wrap: anywhere;
+    }
+}

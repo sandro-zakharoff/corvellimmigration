@@ -1,0 +1,49 @@
+.brand-logo {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    color: var(--color-ink);
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.brand-logo:hover,
+.brand-logo:focus-visible {
+    opacity: 0.78;
+}
+
+.brand-logo__name {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.63px;
+    line-height: 155%;
+}
+
+.brand-logo__mark {
+    color: var(--color-accent);
+}
+
+.brand-logo__descriptor {
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2.2px;
+    line-height: 155%;
+    text-transform: uppercase;
+}
+
+.brand-logo--inverse {
+    gap: 12px;
+    color: var(--color-surface);
+}
+
+.brand-logo--inverse .brand-logo__name {
+    font-size: 24px;
+    letter-spacing: -0.72px;
+}
+
+.brand-logo--inverse .brand-logo__descriptor {
+    color: var(--color-footer-text);
+}

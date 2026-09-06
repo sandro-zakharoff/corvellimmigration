@@ -1,0 +1,41 @@
+.status-message {
+    padding-top: 14px;
+    padding-right: 16px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    border-top: 1px solid var(--color-control-border);
+    border-right: 1px solid var(--color-control-border);
+    border-bottom: 1px solid var(--color-control-border);
+    border-left: 3px solid currentColor;
+    border-radius: var(--radius-small);
+    background: var(--color-white);
+}
+
+.status-message--success {
+    color: var(--color-success);
+}
+
+.status-message--warning {
+    color: var(--color-warning);
+}
+
+.status-message--error {
+    background: var(--color-error-soft);
+    color: var(--color-error);
+}
+
+.status-message__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.32px;
+    line-height: 145%;
+    text-transform: uppercase;
+}
+
+.status-message__text {
+    margin-top: 4px;
+    color: var(--color-text-body);
+    font-size: 14px;
+    line-height: 150%;
+}

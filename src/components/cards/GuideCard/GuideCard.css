@@ -1,0 +1,91 @@
+.guide-card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: var(--radius-small);
+    background: var(--color-footer);
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.guide-card:hover,
+.guide-card:focus-within {
+    box-shadow: 0 8px 18px rgba(15, 42, 49, 0.1);
+    transform: translateY(-2px);
+}
+
+.guide-card__link {
+    display: flex;
+    min-height: 230px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-right: 22px;
+    padding-bottom: 24px;
+    padding-left: 22px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: background-color var(--transition-fast);
+}
+
+.guide-card__link:hover,
+.guide-card__link:focus-visible {
+    background: rgba(62, 124, 134, 0.15);
+}
+
+.guide-card__badge {
+    display: inline-flex;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    border-radius: var(--radius-tiny);
+    background: var(--color-accent);
+    color: var(--color-footer);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    line-height: 145%;
+    text-transform: uppercase;
+}
+
+.guide-card__title {
+    margin-top: 16px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 120%;
+}
+
+.guide-card__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: auto;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.guide-card__action span {
+    transition: transform var(--transition-fast);
+}
+
+.guide-card__link:hover .guide-card__action span,
+.guide-card__link:focus-visible .guide-card__action span {
+    transform: translateY(2px);
+}
+
+@media (max-width: 560px) {
+    .guide-card__link {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+}

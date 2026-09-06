@@ -1,0 +1,35 @@
+.services-overview {
+    padding-top: 62px;
+    padding-right: 0;
+    padding-bottom: 80px;
+    padding-left: 0;
+}
+
+.services-overview__intro {
+    max-width: 876px;
+}
+
+.services-overview__list {
+    margin-top: 40px;
+}
+
+.services-overview__footer {
+    margin-top: 40px;
+}
+
+@media (max-width: 720px) {
+    .services-overview {
+        padding-top: 60px;
+        padding-right: 0;
+        padding-bottom: 60px;
+        padding-left: 0;
+    }
+
+    .services-overview__list {
+        margin-top: 32px;
+    }
+
+    .services-overview__footer {
+        margin-top: 32px;
+    }
+}

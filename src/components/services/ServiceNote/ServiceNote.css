@@ -1,0 +1,27 @@
+.service-note {
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-top: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-small);
+    background: var(--color-page);
+    color: var(--color-ink);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 145%;
+}
+
+.service-note--inverse {
+    border-top-color: var(--color-footer);
+    border-right-color: var(--color-footer);
+    border-bottom-color: var(--color-footer);
+    background: var(--color-footer);
+    color: var(--color-blue-light);
+}

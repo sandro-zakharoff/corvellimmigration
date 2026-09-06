@@ -1,0 +1,21 @@
+.services-page__intro .section-intro__title {
+    max-width: 982px;
+}
+
+.services-page__intro .section-intro__description {
+    max-width: 600px;
+}
+
+.service-category:not(.service-category--surface) .section-intro__title {
+    max-width: 361px;
+}
+
+.service-category--surface .section-intro__title {
+    max-width: 499px;
+}
+
+@media (max-width: 700px) {
+    .services-page__intro .section-intro__title {
+        max-width: none;
+    }
+}

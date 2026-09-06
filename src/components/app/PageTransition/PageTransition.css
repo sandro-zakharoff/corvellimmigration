@@ -1,0 +1,13 @@
+.page-transition {
+    animation: page-transition-enter 260ms ease-out both;
+}
+
+@keyframes page-transition-enter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

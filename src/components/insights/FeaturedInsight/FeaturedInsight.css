@@ -1,0 +1,122 @@
+.featured-insight__card {
+    display: grid;
+    min-height: 385px;
+    grid-template-columns: 520px minmax(0, 1fr);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+}
+
+.featured-insight__media {
+    border-right: 1px solid var(--color-border);
+    background: var(--color-image-fallback);
+}
+
+.featured-insight__body {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-right: 36px;
+    padding-bottom: 40px;
+    padding-left: 36px;
+    background: var(--color-surface-soft);
+}
+
+.featured-insight__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.featured-insight__label {
+    display: inline-flex;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    border-radius: var(--radius-tiny);
+    background: var(--color-accent);
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 145%;
+    text-transform: uppercase;
+}
+
+.featured-insight__meta,
+.featured-insight__title,
+.featured-insight__description {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.featured-insight__meta {
+    color: var(--color-text-light);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.featured-insight__title {
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.featured-insight__description {
+    max-width: 469px;
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.featured-insight__body .arrow-link {
+    margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+    .featured-insight__card {
+        grid-template-columns: minmax(0, 0.84fr) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .featured-insight__card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-insight__media {
+        min-height: 260px;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .featured-insight__body {
+        min-height: 360px;
+        padding-top: 32px;
+        padding-right: 24px;
+        padding-bottom: 32px;
+        padding-left: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-insight__media {
+        min-height: 210px;
+    }
+
+    .featured-insight__body {
+        min-height: 390px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
