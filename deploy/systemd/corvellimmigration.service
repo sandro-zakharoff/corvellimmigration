@@ -9,7 +9,7 @@ User=devel
 Group=www-data
 WorkingDirectory=/var/www/corvellimmigration.com
 Environment=NODE_ENV=production
-EnvironmentFile=/etc/corvellimmigration/corvellimmigration.env
+EnvironmentFile=/var/www/corvellimmigration.com/.env
 ExecStart=/usr/bin/node server/index.js
 Restart=on-failure
 RestartSec=5s

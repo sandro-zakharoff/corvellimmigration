@@ -27,7 +27,7 @@ npm start
 
 ## Развертывание
 
-Готовые production-конфигурации находятся в `deploy/nginx` и `deploy/systemd`. Репозиторий размещается непосредственно в `/var/www/corvellimmigration.com`. Nginx раздает собранный React-сайт из `dist` и передает только запросы `/api` локальному Node.js-процессу. Node.js запускается от существующего пользователя `devel` с группой `www-data`. SMTP-параметры на сервере хранятся вне Git-репозитория в `/etc/corvellimmigration/corvellimmigration.env`.
+Готовые production-конфигурации находятся в `deploy/nginx` и `deploy/systemd`. Репозиторий размещается непосредственно в `/var/www/corvellimmigration.com`. Nginx раздает собранный React-сайт из `dist` и передает только запросы `/api` локальному Node.js-процессу. Node.js запускается от существующего пользователя `devel` с группой `www-data`. SMTP-параметры хранятся в `/var/www/corvellimmigration.com/.env`, который исключен из Git и находится вне публичной папки `dist`.
 
 ## Структура
 
