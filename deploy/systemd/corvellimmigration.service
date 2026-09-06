@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 User=devel
 Group=www-data
-WorkingDirectory=/var/www/corvellimmigration.com/app
+WorkingDirectory=/var/www/corvellimmigration.com
 Environment=NODE_ENV=production
 EnvironmentFile=/etc/corvellimmigration/corvellimmigration.env
 ExecStart=/usr/bin/node server/index.js
