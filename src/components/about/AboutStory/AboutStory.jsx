@@ -1,21 +1,19 @@
+import RichText from "../../common/RichText/RichText";
 import SectionIntro from "../../common/SectionIntro/SectionIntro";
-import { aboutContent } from "../../../content/about";
 import "./AboutStory.css";
 
-function AboutStory() {
-    const { story } = aboutContent;
-
+function AboutStory({ content }) {
     return (
         <section className="about-story">
             <div className="about-story__inner container">
                 <div className="about-story__media">
-                    <img className="about-story__image" src={story.image} alt={story.imageAlt} fetchPriority="high" />
+                    <img className="about-story__image" src={content.image} alt={content.imageAlt} fetchPriority="high" />
                 </div>
                 <div className="about-story__content">
-                    <SectionIntro eyebrow={story.eyebrow} title={story.title} headingLevel={1} />
+                    <SectionIntro eyebrow={content.eyebrow} title={content.title} headingLevel={1} />
                     <div className="about-story__paragraphs">
-                        {story.paragraphs.map((paragraph) => (
-                            <p key={paragraph}>{paragraph}</p>
+                        {content.paragraphs.map((paragraph, index) => (
+                            <p key={index}><RichText value={paragraph} /></p>
                         ))}
                     </div>
                 </div>

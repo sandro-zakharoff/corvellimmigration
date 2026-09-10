@@ -1,26 +1,26 @@
+import RichText from "../../common/RichText/RichText";
 import ArrowLink from "../../common/ArrowLink/ArrowLink";
 import DetailList from "../../common/DetailList/DetailList";
 import SectionIntro from "../../common/SectionIntro/SectionIntro";
-import { serviceHighlights } from "../../../content/services";
 import "./ServicesOverview.css";
 
-function ServicesOverview() {
+function ServicesOverview({ content }) {
     return (
         <section className="services-overview">
             <div className="container">
                 <SectionIntro
                     className="services-overview__intro"
-                    eyebrow="What we do"
-                    title="Employment immigration, organized around your business needs."
+                    eyebrow={content.eyebrow}
+                    title={content.title}
                 />
                 <DetailList
                     className="services-overview__list"
-                    items={serviceHighlights}
+                    items={content.items}
                     interactive
                     relaxed
                 />
                 <div className="services-overview__footer">
-                    <ArrowLink to="/services">Explore all services</ArrowLink>
+                    <ArrowLink to={content.link.path}><RichText value={content.link.label} links={false} /></ArrowLink>
                 </div>
             </div>
         </section>

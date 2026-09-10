@@ -1,5 +1,6 @@
 import SectionIntro from "../../common/SectionIntro/SectionIntro";
 import TextBlock from "../../common/TextBlock/TextBlock";
+import RichText from "../../common/RichText/RichText";
 import "./IndustryContext.css";
 
 function IndustryContext({ content }) {
@@ -13,7 +14,9 @@ function IndustryContext({ content }) {
                         title={content.title}
                         description={content.paragraphs[0]}
                     />
-                    <TextBlock className="industry-context__paragraph">{content.paragraphs[1]}</TextBlock>
+                    {content.paragraphs.slice(1).map((paragraph, index) => (
+                        <TextBlock className="industry-context__paragraph" key={index}><RichText value={paragraph} /></TextBlock>
+                    ))}
                 </div>
                 <div className="industry-context__media">
                     <img className="industry-context__image" src={content.image} alt="" loading="lazy" />

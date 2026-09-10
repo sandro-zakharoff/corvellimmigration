@@ -1,3 +1,4 @@
+import RichText from "../../common/RichText/RichText";
 import { Link } from "react-router-dom";
 import "./GuideCard.css";
 
@@ -6,7 +7,7 @@ function GuideCard({ guide }) {
         <article className="guide-card">
             <Link className="guide-card__link" to={guide.path}>
                 <span className="guide-card__badge">PDF · Guide</span>
-                <h3 className="guide-card__title">{guide.title}</h3>
+                <h3 className="guide-card__title"><RichText value={guide.title} links={false} /></h3>
                 <span className="guide-card__action">
                     Download guide <span>↓</span>
                 </span>

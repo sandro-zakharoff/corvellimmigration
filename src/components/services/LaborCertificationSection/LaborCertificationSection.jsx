@@ -16,8 +16,8 @@ function LaborCertificationSection({ content }) {
                     numbered
                 />
                 <div className="labor-certification__grid">
-                    {content.steps.map((step) => (
-                        <ProcessCard step={step} key={step.code} />
+                    {content.steps.map((step, index) => (
+                        <ProcessCard step={step} key={step.id ?? index} />
                     ))}
                 </div>
                 <ServiceNote inverse>{content.note}</ServiceNote>

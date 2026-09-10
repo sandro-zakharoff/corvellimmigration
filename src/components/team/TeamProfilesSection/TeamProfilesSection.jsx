@@ -30,7 +30,7 @@ function TeamProfilesSection({
                         <TeamProfile
                             person={person}
                             reverse={alternate && index % 2 === 1}
-                            key={person.name}
+                            key={person.id ?? index}
                         />
                     ))}
                 </div>

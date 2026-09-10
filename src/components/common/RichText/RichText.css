@@ -1,7 +1,30 @@
+.rich-text__ink {
+    color: var(--color-ink);
+}
+
+.rich-text__muted {
+    color: var(--color-text-muted);
+}
+
 .rich-text__accent {
     color: var(--color-accent);
 }
 
 .rich-text__strong {
     font-weight: 600;
+}
+
+.rich-text__italic {
+    font-style: italic;
+}
+
+.rich-text__link {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-underline-offset: 4px;
+    transition: color 180ms ease;
+}
+
+.rich-text__link:hover {
+    color: var(--color-accent);
 }

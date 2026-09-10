@@ -22,8 +22,8 @@ function ServiceCategorySection({ content, image = false, surface = false }) {
                     )}
                 </div>
                 <div className="service-category__grid">
-                    {content.cards.map((service) => (
-                        <ServiceCard service={service} key={service.code} />
+                    {content.cards.map((service, index) => (
+                        <ServiceCard service={service} key={service.id ?? index} />
                     ))}
                 </div>
                 {content.note && <ServiceNote>{content.note}</ServiceNote>}

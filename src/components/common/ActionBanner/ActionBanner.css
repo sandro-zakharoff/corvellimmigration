@@ -8,14 +8,15 @@
 
 .action-banner__inner {
     display: flex;
-    min-height: 121px;
     align-items: center;
     justify-content: space-between;
     gap: 48px;
 }
 
 .action-banner__content {
-    max-width: 625px;
+    min-width: 0;
+    max-width: 700px;
+    flex: 1;
 }
 
 .action-banner__eyebrow,
@@ -30,7 +31,7 @@
 .action-banner__eyebrow {
     color: var(--color-footer);
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 145%;
@@ -52,56 +53,13 @@
 .action-banner__description {
     margin-top: 16px;
     color: var(--color-ink);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 160%;
 }
 
 .action-banner__link {
-    display: flex;
-    width: 216px;
-    min-height: 48px;
-    flex: 0 0 216px;
-    align-items: center;
-    justify-content: center;
-    padding-top: 14px;
-    padding-right: 28px;
-    padding-bottom: 14px;
-    padding-left: 28px;
-    border-radius: var(--radius-small);
-    background: var(--color-footer);
-    color: var(--color-white);
-    font-family: var(--font-mono);
-    font-size: 14px;
-    line-height: 135%;
-    text-decoration: none;
-    transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
-}
-
-.action-banner__link:hover,
-.action-banner__link:focus-visible {
-    background: var(--color-ink);
-    transform: translateY(-2px);
-}
-
-.action-banner--expanded .action-banner__inner {
-    min-height: 246px;
-}
-
-.action-banner--expanded .action-banner__content {
-    max-width: 655px;
-}
-
-.action-banner--expanded .action-banner__title {
-    max-width: 407px;
-}
-
-.action-banner--expanded .action-banner__description {
-    max-width: 431px;
-}
-
-.action-banner--expanded .action-banner__link {
-    width: 208px;
-    flex-basis: 208px;
+    flex: 0 0 auto;
+    white-space: nowrap;
 }
 
 @media (max-width: 800px) {
@@ -112,9 +70,7 @@
         padding-left: 0;
     }
 
-    .action-banner__inner,
-    .action-banner--expanded .action-banner__inner {
-        min-height: 0;
+    .action-banner__inner {
         align-items: flex-start;
         flex-direction: column;
         gap: 32px;
@@ -124,9 +80,11 @@
         font-size: 30px;
     }
 
-    .action-banner__link,
-    .action-banner--expanded .action-banner__link {
+    .action-banner__description {
+        font-size: 16px;
+    }
+
+    .action-banner__link {
         width: 100%;
-        flex-basis: auto;
     }
 }

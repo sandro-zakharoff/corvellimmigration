@@ -4,6 +4,7 @@ import "./PageIntro.css";
 function PageIntro({
     eyebrow,
     title,
+    titleParts,
     titleHighlight,
     description,
     descriptionParts,
@@ -25,6 +26,7 @@ function PageIntro({
                     className="page-intro__heading"
                     eyebrow={eyebrow}
                     title={title}
+                    titleParts={titleParts}
                     titleHighlight={titleHighlight}
                     description={description}
                     descriptionParts={descriptionParts}

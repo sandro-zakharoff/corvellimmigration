@@ -7,7 +7,8 @@
         "dev": "concurrently --kill-others-on-fail --names client,server \"npm:dev:client\" \"npm:dev:server\"",
         "dev:client": "vite --host 127.0.0.1",
         "dev:server": "node --watch server/index.js",
-        "build": "vite build",
+        "build": "npm run check:content && vite build",
+        "check:content": "node scripts/check-content.js",
         "preview": "vite preview --host 127.0.0.1",
         "start": "node server/index.js",
         "test": "node --test"

@@ -13,10 +13,6 @@
     margin-top: 32px;
 }
 
-.industry-method__grid .process-card {
-    min-height: 214px;
-}
-
 @media (max-width: 960px) {
     .industry-method__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));

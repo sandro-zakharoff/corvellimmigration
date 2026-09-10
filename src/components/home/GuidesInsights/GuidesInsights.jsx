@@ -1,19 +1,11 @@
 import GuideCollection from "../../common/GuideCollection/GuideCollection";
-import { guides } from "../../../content/insights";
 
-function GuidesInsights() {
+function GuidesInsights({ content }) {
     return (
         <GuideCollection
-            content={{
-                eyebrow: "Guides & insights",
-                title: "Plain-language guides to the visas we file."
-            }}
-            guides={guides}
-            footerLink={{
-                label: "Visit Insights — statistics & guides",
-                path: "/insights",
-                showArrow: false
-            }}
+            content={content}
+            guides={content.guides}
+            footerLink={content.footerLink}
         />
     );
 }

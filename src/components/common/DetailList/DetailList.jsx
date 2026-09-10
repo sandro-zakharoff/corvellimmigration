@@ -1,3 +1,4 @@
+import RichText from "../RichText/RichText";
 import TextBlock from "../TextBlock/TextBlock";
 import "./DetailList.css";
 
@@ -13,13 +14,13 @@ function DetailList({ items, interactive = false, relaxed = false, className = "
                 .filter(Boolean)
                 .join(" ")}
         >
-            {items.map((item) => (
-                <article className="detail-list__item" key={item.title}>
+            {items.map((item, index) => (
+                <article className="detail-list__item" key={item.id ?? index}>
                     <div className="detail-list__identity">
-                        <h3 className="detail-list__title">{item.title}</h3>
-                        <TextBlock className="detail-list__label">{item.label}</TextBlock>
+                        <h3 className="detail-list__title"><RichText value={item.title} /></h3>
+                        <TextBlock className="detail-list__label"><RichText value={item.label} /></TextBlock>
                     </div>
-                    <TextBlock className="detail-list__description">{item.description}</TextBlock>
+                    <TextBlock className="detail-list__description"><RichText value={item.description} /></TextBlock>
                 </article>
             ))}
         </div>

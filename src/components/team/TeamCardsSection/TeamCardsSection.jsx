@@ -8,8 +8,8 @@ function TeamCardsSection({ section, members }) {
             <div className="team-cards-section__inner container">
                 <SectionIntro eyebrow={section.eyebrow} title={section.title} />
                 <div className="team-cards-section__grid">
-                    {members.map((person) => (
-                        <TeamMemberCard person={person} key={person.name} />
+                    {members.map((person, index) => (
+                        <TeamMemberCard person={person} key={person.id ?? index} />
                     ))}
                 </div>
             </div>

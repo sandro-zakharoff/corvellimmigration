@@ -1,36 +1,34 @@
+import RichText from "../../common/RichText/RichText";
 import SectionIntro from "../../common/SectionIntro/SectionIntro";
 import TextBlock from "../../common/TextBlock/TextBlock";
-import { aboutContent } from "../../../content/about";
 import "./FirmToday.css";
 
-function FirmToday() {
-    const { firmToday } = aboutContent;
-
+function FirmToday({ content }) {
     return (
         <section className="firm-today">
             <div className="firm-today__inner container">
                 <div className="firm-today__intro">
                     <SectionIntro
                         className="firm-today__heading"
-                        eyebrow={firmToday.eyebrow}
-                        title={firmToday.title}
+                        eyebrow={content.eyebrow}
+                        title={content.title}
                         inverse
                     />
-                    <TextBlock className="firm-today__description">{firmToday.description}</TextBlock>
+                    <TextBlock className="firm-today__description"><RichText value={content.description} /></TextBlock>
                 </div>
                 <div className="firm-today__metrics">
-                    {firmToday.metrics.map((metric) => (
-                        <div className="firm-today__metric" key={metric.label}>
-                            <span className="firm-today__metric-label">{metric.label}</span>
-                            <span className="firm-today__metric-value">{metric.value}</span>
+                    {content.metrics.map((metric, index) => (
+                        <div className="firm-today__metric" key={metric.id ?? index}>
+                            <span className="firm-today__metric-label"><RichText value={metric.label} /></span>
+                            <span className="firm-today__metric-value"><RichText value={metric.value} /></span>
                         </div>
                     ))}
                 </div>
                 <ul className="firm-today__credentials">
-                    {firmToday.credentials.map((credential) => (
-                        <li className="firm-today__credential" key={credential}>
+                    {content.credentials.map((credential, index) => (
+                        <li className="firm-today__credential" key={index}>
                             <span className="firm-today__credential-mark" />
-                            <span>{credential}</span>
+                            <span><RichText value={credential} /></span>
                         </li>
                     ))}
                 </ul>

@@ -1,23 +1,23 @@
+import RichText from "../../common/RichText/RichText";
 import SectionIntro from "../../common/SectionIntro/SectionIntro";
 import TextBlock from "../../common/TextBlock/TextBlock";
-import { firmAdvantages } from "../../../content/firm";
 import "./WhyCorvell.css";
 
-function WhyCorvell() {
+function WhyCorvell({ content }) {
     return (
         <section className="why-corvell">
             <div className="container">
                 <SectionIntro
                     className="why-corvell__intro"
-                    eyebrow="Why Corvell"
-                    title="A leaner firm, built on software, that gets approvals."
+                    eyebrow={content.eyebrow}
+                    title={content.title}
                     inverse
                 />
                 <div className="why-corvell__grid">
-                    {firmAdvantages.map((advantage) => (
-                        <article className="why-corvell__item" key={advantage.title}>
-                            <h3 className="why-corvell__title">{advantage.title}</h3>
-                            <TextBlock className="why-corvell__description">{advantage.description}</TextBlock>
+                    {content.items.map((advantage, index) => (
+                        <article className="why-corvell__item" key={advantage.id ?? index}>
+                            <h3 className="why-corvell__title"><RichText value={advantage.title} /></h3>
+                            <TextBlock className="why-corvell__description"><RichText value={advantage.description} /></TextBlock>
                         </article>
                     ))}
                 </div>

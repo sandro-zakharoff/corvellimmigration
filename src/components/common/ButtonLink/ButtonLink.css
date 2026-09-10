@@ -1,0 +1,39 @@
+.button-link {
+    display: inline-flex;
+    min-height: 51.25px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14px;
+    padding-right: 28px;
+    padding-bottom: 15px;
+    padding-left: 28px;
+    border-radius: var(--radius-small);
+    background: var(--color-footer);
+    color: var(--color-white);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 135%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-link[href] {
+    transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background: var(--color-ink);
+    transform: translateY(-2px);
+}
+
+.button-link--accent {
+    background: var(--color-accent);
+    color: var(--color-ink);
+}
+
+.button-link--accent:hover,
+.button-link--accent:focus-visible {
+    background: var(--color-accent);
+}

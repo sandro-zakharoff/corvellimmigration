@@ -1,4 +1,5 @@
 import ArrowLink from "../ArrowLink/ArrowLink";
+import RichText from "../RichText/RichText";
 import "./LinkListCta.css";
 
 function LinkListCta({ content, flushTop = false, compactTitle = false, wideLinks = false }) {
@@ -14,11 +15,11 @@ function LinkListCta({ content, flushTop = false, compactTitle = false, wideLink
                 .join(" ")}
         >
             <div className="link-list-cta__inner container">
-                <h2 className="link-list-cta__title">{content.title}</h2>
+                <h2 className="link-list-cta__title"><RichText value={content.title} /></h2>
                 <div className="link-list-cta__links">
                     {content.links.map((link) => (
                         <ArrowLink to={link.path} showArrow={false} key={link.path}>
-                            {link.label}
+                            <RichText value={link.label} links={false} />
                         </ArrowLink>
                     ))}
                 </div>

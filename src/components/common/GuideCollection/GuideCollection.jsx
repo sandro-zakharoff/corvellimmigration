@@ -1,3 +1,4 @@
+import RichText from "../RichText/RichText";
 import GuideCard from "../../cards/GuideCard/GuideCard";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import SectionIntro from "../SectionIntro/SectionIntro";
@@ -15,14 +16,14 @@ function GuideCollection({ content, guides, inverse = false, footerLink }) {
                     inverse={inverse}
                 />
                 <div className="guide-collection__grid">
-                    {guides.map((guide) => (
-                        <GuideCard guide={guide} key={guide.title} />
+                    {guides.map((guide, index) => (
+                        <GuideCard guide={guide} key={guide.id ?? index} />
                     ))}
                 </div>
                 {footerLink && (
                     <div className="guide-collection__footer">
                         <ArrowLink to={footerLink.path} showArrow={footerLink.showArrow}>
-                            {footerLink.label}
+                            <RichText value={footerLink.label} links={false} />
                         </ArrowLink>
                     </div>
                 )}

@@ -1,4 +1,5 @@
 import TextBlock from "../TextBlock/TextBlock";
+import RichText from "../RichText/RichText";
 import "./SectionIntro.css";
 
 function SectionIntro({
@@ -14,7 +15,7 @@ function SectionIntro({
     className = ""
 }) {
     const Heading = `h${headingLevel}`;
-    const [eyebrowNumber, ...eyebrowLabelParts] = numbered ? eyebrow.split(" ") : [];
+    const [eyebrowNumber, ...eyebrowLabelParts] = numbered && typeof eyebrow === "string" ? eyebrow.split(" ") : [];
     const eyebrowLabel = eyebrowLabelParts.join(" ");
 
     return (
@@ -28,8 +29,8 @@ function SectionIntro({
                 .filter(Boolean)
                 .join(" ")}
         >
-            <TextBlock className="section-intro__eyebrow">
-                {numbered ? (
+            {eyebrow && <TextBlock className="section-intro__eyebrow">
+                {numbered && typeof eyebrow === "string" ? (
                     <>
                         <span className="section-intro__eyebrow-number">{eyebrowNumber}</span>
                         {eyebrowLabel && (
@@ -40,25 +41,25 @@ function SectionIntro({
                         )}
                     </>
                 ) : (
-                    eyebrow
+                    <RichText value={eyebrow} />
                 )}
-            </TextBlock>
+            </TextBlock>}
             <Heading className="section-intro__title">
                 {titleParts
                     ? titleParts.map((part, index) =>
                           part.accent ? (
                               <span className="section-intro__title-accent" key={index}>
-                                  {part.text}
+                                  <RichText value={part} />
                               </span>
                           ) : (
-                              part.text
+                              <RichText value={part} key={index} />
                           )
                       )
-                    : title}
+                    : <RichText value={title} />}
                 {!titleParts && titleHighlight && (
                     <>
                         {" "}
-                        <span className="section-intro__title-highlight">{titleHighlight}</span>
+                        <span className="section-intro__title-highlight"><RichText value={titleHighlight} /></span>
                     </>
                 )}
             </Heading>
@@ -68,13 +69,13 @@ function SectionIntro({
                         ? descriptionParts.map((part, index) =>
                               part.emphasis ? (
                                   <span className="section-intro__description-emphasis" key={index}>
-                                      {part.text}
+                                      <RichText value={part} />
                                   </span>
                               ) : (
-                                  part.text
+                                  <RichText value={part} key={index} />
                               )
                           )
-                        : description}
+                        : <RichText value={description} />}
                 </TextBlock>
             )}
         </div>

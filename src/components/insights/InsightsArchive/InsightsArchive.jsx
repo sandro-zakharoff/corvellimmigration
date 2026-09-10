@@ -8,8 +8,8 @@ function InsightsArchive({ content }) {
             <div className="insights-archive__inner container">
                 <SectionIntro eyebrow={content.eyebrow} title={content.title} />
                 <div className="insights-archive__list">
-                    {content.items.map((item) => (
-                        <InsightArchiveItem item={item} key={item.title} />
+                    {content.items.map((item, index) => (
+                        <InsightArchiveItem item={item} key={item.id ?? index} />
                     ))}
                 </div>
             </div>
