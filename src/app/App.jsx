@@ -7,7 +7,9 @@ import AboutPage from "../pages/AboutPage/AboutPage";
 import CareersPage from "../pages/CareersPage/CareersPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import HomePage from "../pages/HomePage/HomePage";
+import IndustryDetailPage from "../pages/IndustryDetailPage/IndustryDetailPage";
 import IndustriesPage from "../pages/IndustriesPage/IndustriesPage";
+import InsightArticlePage from "../pages/InsightArticlePage/InsightArticlePage";
 import InsightsPage from "../pages/InsightsPage/InsightsPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import ServicesPage from "../pages/ServicesPage/ServicesPage";
@@ -28,7 +30,9 @@ function App() {
                     <Route path="/team" element={<TeamPage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/industries" element={<IndustriesPage />} />
+                    <Route path="/industries/:slug" element={<IndustryDetailPage />} />
                     <Route path="/insights" element={<InsightsPage />} />
+                    <Route path="/insights/briefs/:slug" element={<InsightArticlePage />} />
                     <Route path="/careers" element={<CareersPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="*" element={<NotFoundPage />} />
