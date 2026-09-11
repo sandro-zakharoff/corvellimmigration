@@ -97,7 +97,7 @@ export const contactPageContent = {
             email: "Email",
             phone: "Phone",
             office: "Office",
-            hours: "Hours"
+            // hours: "Hours"
         },
         // mapLabel: "[ Map — Brickell, Miami ]",
         // hours: "Mon–Fri · 9:00 AM – 6:00 PM ET"

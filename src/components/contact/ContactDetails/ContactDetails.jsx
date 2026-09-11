@@ -24,10 +24,10 @@ function ContactDetails({ content, contactDetails }) {
                         <span key={line}>{line}</span>
                     ))}
                 </TextBlock>
-                <div className="contact-details__map">
+                {/* <div className="contact-details__map">
                     <img className="contact-details__map-image" src={mapImage} alt="" />
                     <span className="contact-details__map-label">{content.mapLabel}</span>
-                </div>
+                </div> */}
             </div>
             <div className="contact-details__item contact-details__item--last">
                 <TextBlock className="contact-details__label">{content.labels.hours}</TextBlock>
