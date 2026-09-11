@@ -4,8 +4,8 @@ export const contactPageContent = {
         title: "Let's talk about your workforce.",
         descriptionParts: [
             { text: "Tell us what your team needs. " },
-            { text: "A member of our team will get back to you soon", emphasis: true },
-            { text: " — not a bot, and not an intake queue." }
+            { text: "A member of our team will get back to you soon.", emphasis: true }
+            // { text: " — not a bot, and not an intake queue." }
         ]
     },
     form: {
@@ -40,14 +40,22 @@ export const contactPageContent = {
                 label: "Team size",
                 optionalLabel: "(optional)",
                 placeholder: "Select a range",
-                type: "select"
+                type: "select",
+                options: [
+                    { value: "self-employed", label: "Just me (Self-employed)" },
+                    { value: "1-10", label: "1–10 employees" },
+                    { value: "11-50", label: "11–50 employees" },
+                    { value: "51-200", label: "51–200 employees" },
+                    { value: "201-500", label: "201–500 employees" },
+                    { value: "501+", label: "501+ employees" }
+                ]
             },
             {
                 id: "message",
                 name: "message",
                 label: "How can we help?",
                 placeholder:
-                    "A few lines on the roles you're hiring, the visas you're considering, or the challenge you're facing.",
+                    "Please provide details about your workforce needs.",
                 type: "textarea",
                 required: true
             }
@@ -91,7 +99,7 @@ export const contactPageContent = {
             office: "Office",
             hours: "Hours"
         },
-        mapLabel: "[ Map — Brickell, Miami ]",
-        hours: "Mon–Fri · 9:00 AM – 6:00 PM ET"
+        // mapLabel: "[ Map — Brickell, Miami ]",
+        // hours: "Mon–Fri · 9:00 AM – 6:00 PM ET"
     }
 };
