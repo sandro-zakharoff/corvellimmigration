@@ -51,7 +51,8 @@ import {
     ContentNote,
     ContentTimeline,
     ContentHeading,
-    ContentLink
+    ContentLink,
+    ContentStats
 } from "../ContentBlocks/ContentBlocks";
 
 export const blockRenderers = {
@@ -105,7 +106,8 @@ export const blockRenderers = {
     note: ContentNote,
     timeline: ContentTimeline,
     heading: ContentHeading,
-    link: ContentLink
+    link: ContentLink,
+    stats: ContentStats
 };
 
 function renderBlock(block, index) {

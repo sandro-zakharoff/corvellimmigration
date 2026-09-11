@@ -197,7 +197,7 @@ function validateBlockData(block, definition, path) {
         });
     }
 
-    if (["text-ticker", "insight-stats", "firm-today"].includes(block.type)) {
+    if (["text-ticker", "insight-stats", "firm-today", "stats"].includes(block.type)) {
         const field = block.type === "firm-today" ? "metrics" : "items";
         validateRecords(block[field], `${path}.${field}`, ["value", "label"]);
     }

@@ -176,6 +176,28 @@ export function ContentList({ content }) {
     );
 }
 
+export function ContentStats({ content }) {
+    if (content.items.length === 0) {
+        return null;
+    }
+
+    return (
+        <div className="content-blocks__stats-wrap">
+            <div className="content-blocks__stats" style={{ "--stats-columns": Math.min(content.items.length, 4) }}>
+                {content.items.map((stat, index) => (
+                    <div className="content-blocks__stat" key={index}>
+                        <span className={`content-blocks__stat-value${stat.accent ? " content-blocks__stat-value--accent" : ""}`}>
+                            <RichText value={stat.value} />
+                        </span>
+                        <span className="content-blocks__stat-label"><RichText value={stat.label} /></span>
+                    </div>
+                ))}
+            </div>
+            {content.note && <TextBlock className="content-blocks__stats-note"><RichText value={content.note} /></TextBlock>}
+        </div>
+    );
+}
+
 export function ContentNote({ content }) {
     return (
         <TextBlock className="content-blocks__source-note"><RichText value={content.text} /></TextBlock>

@@ -49,5 +49,6 @@ export const blockDefinitions = {
     note: { required: ["text"], flow: true },
     timeline: { arrays: ["items"], flow: true },
     heading: { required: ["text"], flow: true },
-    link: { required: ["path", "label"], flow: true }
+    link: { required: ["path", "label"], flow: true },
+    stats: { arrays: ["items"], flow: true }
 };
