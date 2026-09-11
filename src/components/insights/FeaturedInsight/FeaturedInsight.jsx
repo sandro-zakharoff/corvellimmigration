@@ -7,7 +7,9 @@ function FeaturedInsight({ insight }) {
     return (
         <section className="featured-insight">
             <div className="featured-insight__card container">
-                <div className="featured-insight__media" />
+                <div className="featured-insight__media">
+                    {insight.image && <img src={insight.image} alt={insight.imageAlt ?? ""} />}
+                </div>
                 <div className="featured-insight__body">
                     <div className="featured-insight__content">
                         <span className="featured-insight__label"><RichText value={insight.label} /></span>

@@ -1,3 +1,5 @@
+import insightsFeaturedImage from "../assets/images/insights-featured.jpg";
+
 export const guides = [
     { title: "How to sponsor an EB-2 employee", path: "/insights/guides/eb-2-sponsorship" },
     { title: "How PERM labor certification works", path: "/insights/guides/perm-labor-certification" },
@@ -18,7 +20,9 @@ export const insightsPageContent = {
         title: "August 2026 Employer Immigration Brief",
         description:
             "Everything that moved this quarter — fees, processing times, Visa Bulletin, and policy — in one employer-focused read, with what each change means for your filings.",
-        path: "/insights/briefs/august-2026-employer-immigration-brief"
+        path: "/insights/briefs/august-2026-employer-immigration-brief",
+        image: insightsFeaturedImage,
+        imageAlt: "Stacks of immigration case documents on an office desk"
     },
     archive: {
         eyebrow: "Archive",
