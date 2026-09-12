@@ -14,7 +14,7 @@ function CareerRoleList({ items }) {
     );
 }
 
-function CareerRoleCard({ role }) {
+function CareerRoleCard({ role, postedLabel, postedDate }) {
     return (
         <article className="career-role-card">
             <header className="career-role-card__header">
@@ -28,7 +28,7 @@ function CareerRoleCard({ role }) {
                         ))}
                     </div>
                 </div>
-                <span className="career-role-card__posted"><RichText value={role.posted} /></span>
+                <span className="career-role-card__posted"><RichText value={postedLabel} /> · {postedDate}</span>
             </header>
             <div className="career-role-card__body">
                 <section className="career-role-card__section">

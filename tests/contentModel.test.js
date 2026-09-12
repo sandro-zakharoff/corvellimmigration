@@ -102,13 +102,14 @@ test("article lists, statistics, timelines and table cells reject incomplete ite
 test("common links require a destination and the label rendered by their component", () => {
     validateBlocks([
         { type: "action-banner", title: "Contact", link: { path: "/contact", label: [{ text: "Write", strong: true }] } },
-        { type: "guide-collection", title: "Guides", guides: [{ title: "Guide", path: "/guide" }] }
+        { type: "guide-collection", title: "Guides", guides: [{ id: "eb-2", title: "Guide" }] }
     ]);
 
     assert.throws(() => validateBlocks([{ type: "action-banner", title: "Contact", link: "/contact" }]), /blocks\[0\].link/);
     assert.throws(() => validateBlocks([{ type: "action-banner", title: "Contact", link: { label: "Write" } }]), /link.path/);
     assert.throws(() => validateBlocks([{ type: "link-list-cta", title: "Contact", links: [{ path: "/contact" }] }]), /links\[0\].label/);
-    assert.throws(() => validateBlocks([{ type: "guide-collection", title: "Guides", guides: [{ label: "Guide", path: "/guide" }] }]), /guides\[0\].title/);
+    assert.throws(() => validateBlocks([{ type: "guide-collection", title: "Guides", guides: [{ id: "eb-2", label: "Guide" }] }]), /guides\[0\].title/);
+    assert.throws(() => validateBlocks([{ type: "guide-collection", title: "Guides", guides: [{ id: "unknown", title: "Guide" }] }]), /guides\[0\].id/);
     assert.throws(() => validateBlocks([{ type: "insights-archive", title: "Archive", items: [{ title: "Brief" }] }]), /items\[0\].path/);
 });
 

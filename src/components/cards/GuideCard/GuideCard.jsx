@@ -1,17 +1,16 @@
 import RichText from "../../common/RichText/RichText";
-import { Link } from "react-router-dom";
 import "./GuideCard.css";
 
-function GuideCard({ guide }) {
+function GuideCard({ guide, onSelect }) {
     return (
         <article className="guide-card">
-            <Link className="guide-card__link" to={guide.path}>
+            <button className="guide-card__link" type="button" onClick={() => onSelect(guide)}>
                 <span className="guide-card__badge">PDF · Guide</span>
-                <h3 className="guide-card__title"><RichText value={guide.title} links={false} /></h3>
+                <span className="guide-card__title"><RichText value={guide.title} links={false} /></span>
                 <span className="guide-card__action">
                     Download guide <span>↓</span>
                 </span>
-            </Link>
+            </button>
         </article>
     );
 }
