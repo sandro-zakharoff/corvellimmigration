@@ -137,6 +137,7 @@
     .site-header__nav.is-open {
         max-height: calc(100dvh - var(--header-height));
         border-bottom-color: var(--color-border);
+        background: #eeefeb;
         opacity: 1;
         pointer-events: auto;
     }
