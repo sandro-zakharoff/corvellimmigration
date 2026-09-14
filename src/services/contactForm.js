@@ -1,31 +1,7 @@
-export class ContactRequestError extends Error {
-    constructor(code, fields = {}) {
-        super(code);
-        this.code = code;
-        this.fields = fields;
-    }
-}
+import { postForm } from "./formRequest";
 
-export async function sendContactForm(data) {
-    let response;
+export { FormRequestError as ContactRequestError } from "./formRequest";
 
-    try {
-        response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
-    } catch {
-        throw new ContactRequestError("NETWORK_ERROR");
-    }
-
-    const result = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-        throw new ContactRequestError(result.code || "REQUEST_FAILED", result.fields);
-    }
-
-    return result;
+export function sendContactForm(data, options) {
+    return postForm("/api/contact", data, options);
 }

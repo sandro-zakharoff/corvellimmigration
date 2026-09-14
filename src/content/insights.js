@@ -1,11 +1,6 @@
 import insightsFeaturedImage from "../assets/images/insights-featured.jpg";
 
-export const guides = [
-    { title: "How to sponsor an EB-2 employee", path: "/insights/guides/eb-2-sponsorship" },
-    { title: "How PERM labor certification works", path: "/insights/guides/perm-labor-certification" },
-    { title: "Sponsoring an H-1B specialty worker", path: "/insights/guides/h-1b-sponsorship" },
-    { title: "Running a compliant H-2B seasonal program", path: "/insights/guides/h-2b-program" }
-];
+export { guides } from "../../shared/guides.js";
 
 export const insightsPageContent = {
     intro: {

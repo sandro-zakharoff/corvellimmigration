@@ -1,10 +1,14 @@
+import { useState } from "react";
 import RichText from "../RichText/RichText";
+import GuideRequestDialog from "../../guides/GuideRequestDialog/GuideRequestDialog";
 import GuideCard from "../../cards/GuideCard/GuideCard";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import SectionIntro from "../SectionIntro/SectionIntro";
 import "./GuideCollection.css";
 
 function GuideCollection({ content, guides, inverse = false, footerLink }) {
+    const [selectedGuide, setSelectedGuide] = useState(null);
+
     return (
         <section className={`guide-collection${inverse ? " guide-collection--inverse" : ""}`}>
             <div className="guide-collection__inner container">
@@ -17,7 +21,7 @@ function GuideCollection({ content, guides, inverse = false, footerLink }) {
                 />
                 <div className="guide-collection__grid">
                     {guides.map((guide, index) => (
-                        <GuideCard guide={guide} key={guide.id ?? index} />
+                        <GuideCard guide={guide} onSelect={setSelectedGuide} key={guide.id ?? index} />
                     ))}
                 </div>
                 {footerLink && (
@@ -28,6 +32,7 @@ function GuideCollection({ content, guides, inverse = false, footerLink }) {
                     </div>
                 )}
             </div>
+            {selectedGuide && <GuideRequestDialog guide={selectedGuide} onClose={() => setSelectedGuide(null)} />}
         </section>
     );
 }

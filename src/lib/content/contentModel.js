@@ -1,4 +1,5 @@
 import { blockDefinitions } from "./blockDefinitions.js";
+import { getGuide } from "../../../shared/guides.js";
 
 function fail(path, message) {
     throw new Error(`Ошибка контента: ${path} — ${message}`);
@@ -156,10 +157,17 @@ function validateBlockData(block, definition, path) {
         validateRichText(block.note, `${path}.note`);
     }
 
-    for (const field of ["links", "guides"]) {
-        if (block[field] !== undefined) {
-            validateArray(block[field], `${path}.${field}`, (link, location) => validateLink(link, location, field === "guides" ? "title" : "label"));
-        }
+    if (block.links !== undefined) {
+        validateArray(block.links, `${path}.links`, validateLink);
+    }
+
+    if (block.guides !== undefined) {
+        validateRecords(block.guides, `${path}.guides`, ["id", "title"], (guide, location) => {
+            if (!getGuide(guide.id)) {
+                fail(`${location}.id`, "выберите существующий PDF: eb-2, perm, h-1b или h-2b");
+            }
+            validateRichText(guide.title, `${location}.title`);
+        });
     }
 
     if (["industry-directory", "industries-showcase", "industry-related"].includes(block.type)) {

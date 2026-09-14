@@ -27,13 +27,13 @@ export const careersPageContent = {
     roles: {
         eyebrow: "Open roles",
         title: "Where we're hiring.",
-        updated: "Listings updated · August 19, 2026",
+        updatedLabel: "Listings updated",
+        postedLabel: "Posted",
         items: [
             {
                 slug: "experienced-immigration-paralegal",
                 title: "Experienced Immigration Paralegal",
                 details: ["Miami, FL · Remote", "Full-time", "Employment-based practice"],
-                posted: "Posted · Aug 19, 2026",
                 overview: {
                     title: "The role",
                     description:

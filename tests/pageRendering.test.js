@@ -32,6 +32,22 @@ test("shared page renderer supports all published content and flexible compositi
             });
         }
 
+        await context.test("all guide collections use the same four popup triggers", async () => {
+            const { guides } = await server.ssrLoadModule("/shared/guides.js");
+            let collections = 0;
+
+            for (const blocks of Object.values(pages)) {
+                const html = render(blocks);
+                if (!html.includes('class="guide-card"')) continue;
+                collections += 1;
+                assert.equal((html.match(/<button class="guide-card__link" type="button"/g) || []).length, 4);
+                assert.doesNotMatch(html, /href="\/insights\/guides\//);
+                for (const guide of guides) assert.ok(html.includes(guide.title));
+            }
+
+            assert.equal(collections, 2);
+        });
+
         for (const entry of [...industryPages, ...insightArticles]) {
             await context.test(entry.slug, () => {
                 const html = render(entry.blocks);

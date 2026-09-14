@@ -28,7 +28,7 @@ function SiteFooter() {
                                 <h2 className="site-footer__group-title">{group.title}</h2>
                                 <ul className="site-footer__links">
                                     {group.links.map((link) => (
-                                        <li key={link.path}>
+                                        <li key={`${link.path}-${link.label}`}>
                                             <Link className="site-footer__link" to={link.path}>
                                                 {link.label}
                                             </Link>
