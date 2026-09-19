@@ -2,7 +2,7 @@ export const mainNavigation = [
     { label: "Home", path: "/" },
     { label: "About us", path: "/about" },
     { label: "Team", path: "/team" },
-    { label: "Services", path: "/services" },
+    { label: "Services", path: "/services", activePaths: ["/h-2b"] },
     { label: "Industries", path: "/industries" },
     { label: "Insights", path: "/insights" },
     { label: "Careers", path: "/careers" },
@@ -25,7 +25,7 @@ export const footerNavigation = [
             { label: "EB-2", path: "/services/" },
             { label: "EB-3", path: "/services/" },
             { label: "H-1B", path: "/services/" },
-            { label: "H-2B", path: "/services/" },
+            { label: "H-2B", path: "/h-2b" },
             { label: "All visas", path: "/services" }
         ]
     },

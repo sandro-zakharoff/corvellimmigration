@@ -7,6 +7,7 @@ import AboutPage from "../pages/AboutPage/AboutPage";
 import CareersPage from "../pages/CareersPage/CareersPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import HomePage from "../pages/HomePage/HomePage";
+import H2BPage from "../pages/H2BPage/H2BPage";
 import IndustryDetailPage from "../pages/IndustryDetailPage/IndustryDetailPage";
 import IndustriesPage from "../pages/IndustriesPage/IndustriesPage";
 import InsightArticlePage from "../pages/InsightArticlePage/InsightArticlePage";
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/team" element={<TeamPage />} />
                     <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/h-2b" element={<H2BPage />} />
                     <Route path="/industries" element={<IndustriesPage />} />
                     <Route path="/industries/:slug" element={<IndustryDetailPage />} />
                     <Route path="/insights" element={<InsightsPage />} />

@@ -79,7 +79,7 @@ function validateLink(value, path, labelField = "label") {
 
 const richTextFields = new Set([
     "title", "description", "eyebrow", "label", "text", "quote", "author", "byline",
-    "category", "caption", "value", "code", "tag", "position", "name", "clientsLabel", "date"
+    "category", "caption", "value", "code", "tag", "position", "name", "clientsLabel", "date", "prefix"
 ]);
 
 function validateValues(value, path) {
@@ -106,7 +106,7 @@ function validateValues(value, path) {
                 validateRichText(field, `${path}.${key}`);
             }
 
-            if (["link", "footerLink"].includes(key)) {
+            if (["link", "footerLink", "secondaryLink"].includes(key)) {
                 validateLink(field, `${path}.${key}`);
             }
 
@@ -183,6 +183,38 @@ function validateBlockData(block, definition, path) {
     if (block.type === "industry-roles") {
         validateRecords(block.groups, `${path}.groups`, ["title"], (group, location) => {
             validateRecords(group.items, `${location}.items`, ["title"]);
+        });
+    }
+
+    if (block.type === "image-hero") {
+        if (!block.title && !block.titleParts?.length) {
+            fail(`${path}.title`, "заполните title или titleParts");
+        }
+        if (block.imagePosition !== undefined && !["left", "right"].includes(block.imagePosition)) {
+            fail(`${path}.imagePosition`, "используйте left или right");
+        }
+        if (block.prominent !== undefined && typeof block.prominent !== "boolean") {
+            fail(`${path}.prominent`, "используйте true или false");
+        }
+    }
+
+    if (block.type === "detail-section") {
+        for (const field of ["surface", "prominent"]) {
+            if (block[field] !== undefined && typeof block[field] !== "boolean") {
+                fail(`${path}.${field}`, "используйте true или false");
+            }
+        }
+        validateRecords(block.groups, `${path}.groups`, ["items"], (group, groupPath) => {
+            validateRecords(group.items, `${groupPath}.items`, ["title", "description", "metrics"], (item, itemPath) => {
+                if (item.highlighted !== undefined && typeof item.highlighted !== "boolean") {
+                    fail(`${itemPath}.highlighted`, "используйте true или false");
+                }
+                validateRecords(item.metrics, `${itemPath}.metrics`, ["value"], (metric, metricPath) => {
+                    if (metric.tone !== undefined && !["ink", "teal", "accent", "success"].includes(metric.tone)) {
+                        fail(`${metricPath}.tone`, "используйте ink, teal, accent или success");
+                    }
+                });
+            });
         });
     }
 

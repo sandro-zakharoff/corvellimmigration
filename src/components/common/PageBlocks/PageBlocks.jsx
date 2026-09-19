@@ -13,7 +13,8 @@ import TeamCardsSection from "../../team/TeamCardsSection/TeamCardsSection";
 import ServiceCategorySection from "../../services/ServiceCategorySection/ServiceCategorySection";
 import LaborCertificationSection from "../../services/LaborCertificationSection/LaborCertificationSection";
 import ComplianceSection from "../../services/ComplianceSection/ComplianceSection";
-import IndustriesHero from "../../industries/IndustriesHero/IndustriesHero";
+import ImageHero from "../ImageHero/ImageHero";
+import DetailSection from "../DetailSection/DetailSection";
 import IndustryContext from "../../industries/IndustryContext/IndustryContext";
 import IndustryDirectory from "../../industries/IndustryDirectory/IndustryDirectory";
 import IndustryMethod from "../../industries/IndustryMethod/IndustryMethod";
@@ -73,7 +74,9 @@ export const blockRenderers = {
     "labor-certification": LaborCertificationSection,
     compliance: ComplianceSection,
     "action-banner": ActionBanner,
-    "industries-hero": IndustriesHero,
+    "industries-hero": ImageHero,
+    "image-hero": ImageHero,
+    "detail-section": DetailSection,
     "industry-context": IndustryContext,
     "industry-directory": ({ content }) => <IndustryDirectory content={content} industries={content.industries} />,
     "industry-method": IndustryMethod,

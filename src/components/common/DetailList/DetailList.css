@@ -74,3 +74,112 @@
         padding-left: 0;
     }
 }
+
+.detail-list--metrics {
+    border-top: 0;
+}
+
+.detail-list--metrics .detail-list__item {
+    grid-template-columns: 260px minmax(0, 1fr) 180px;
+    align-items: start;
+    gap: 36px;
+    padding-top: 32px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+    padding-left: 24px;
+}
+
+.detail-list--metrics .detail-list__item--highlighted {
+    background: var(--color-white);
+    box-shadow: inset 4px 0 0 var(--color-accent);
+}
+
+.detail-list__eyebrow {
+    margin-bottom: 10px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+.detail-list--metrics .detail-list__label {
+    margin-top: 10px;
+    color: var(--color-blue-muted);
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-transform: none;
+}
+
+.detail-list__metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: right;
+}
+
+.detail-list__metric-value {
+    display: block;
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 115%;
+}
+
+.detail-list__metric-value--teal {
+    color: var(--color-teal);
+}
+
+.detail-list__metric-value--success {
+    color: var(--color-success);
+}
+
+.detail-list__metric-value--accent {
+    color: var(--color-accent);
+}
+
+.detail-list__metric-label {
+    margin-top: 8px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 160%;
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+    .detail-list--metrics .detail-list__item {
+        grid-template-columns: 210px minmax(0, 1fr) 150px;
+        gap: 24px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .detail-list--metrics .detail-list__item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .detail-list__metrics {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        text-align: left;
+    }
+
+    .detail-list__metric {
+        flex: 0 1 auto;
+        max-width: 240px;
+    }
+
+    .detail-list__metric-value {
+        font-size: 28px;
+    }
+}

@@ -39,7 +39,9 @@ function SiteHeader() {
                 </button>
                 <nav className={`site-header__nav${isMenuOpen ? " is-open" : ""}`}>
                     {mainNavigation.map((item) => {
-                        const isActive = item.path === "/" ? pathname === "/" : pathname.startsWith(item.path);
+                        const isActive = pathname === item.path ||
+                            (item.path !== "/" && pathname.startsWith(`${item.path}/`)) ||
+                            item.activePaths?.includes(pathname.replace(/\/$/, ""));
 
                         return (
                             <Link

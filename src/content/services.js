@@ -14,7 +14,7 @@ export const serviceHighlights = [
             "Streamlined permanent residence for nurses, physical therapists, and exceptional-ability roles — skipping the standard labor market test."
     },
     {
-        title: "Seasonal & peak-demand crews",
+        title: { text: "Seasonal & peak-demand crews", path: "/h-2b", tone: "ink" },
         label: "H-2B",
         description:
             "Temporary non-agricultural workers for businesses with seasonal, peak-load, or one-time labor needs."
@@ -79,7 +79,7 @@ export const servicesPageContent = {
             },
             {
                 code: "H-2B",
-                title: "Seasonal & peak-demand crews",
+                title: { text: "Seasonal & peak-demand crews", path: "/h-2b", tone: "ink" },
                 description:
                     "Temporary non-agricultural workers for seasonal, peak-load, intermittent, or one-time needs. Runs through a DOL temporary labor certification.",
                 fits: "Hospitality · Landscaping · Construction · Seafood"

@@ -3,6 +3,7 @@ import { careersPageContent } from "./careers";
 import { contactPageContent } from "./contact";
 import { firmAdvantages, firmMetrics } from "./firm";
 import { homePageContent } from "./home";
+import { h2bPageContent } from "./h2b";
 import { clientLogos, industries, industriesPageContent, industryTickerItems } from "./industries";
 import { guides, insightsPageContent } from "./insights";
 import {
@@ -127,4 +128,12 @@ export const contactPageBlocks = [
         ...contactPageContent.intro
     },
     { type: "contact-section", form: contactPageContent.form, details: contactPageContent.details }
+];
+
+export const h2bPageBlocks = [
+    { type: "image-hero", ...h2bPageContent.hero },
+    { type: "detail-section", ...h2bPageContent.process },
+    { type: "detail-section", ...h2bPageContent.costs },
+    { type: "detail-section", ...h2bPageContent.intake },
+    { type: "action-banner", ...h2bPageContent.cta }
 ];

@@ -17,6 +17,8 @@ export const blockDefinitions = {
     compliance: { required: ["title"], arrays: ["items"] },
     "action-banner": { required: ["title"] },
     "industries-hero": { required: ["image"], arrays: ["titleParts"] },
+    "image-hero": { required: ["image", "imageAlt"] },
+    "detail-section": { required: ["title"], arrays: ["groups"] },
     "industry-context": { required: ["title", "image"], arrays: ["paragraphs"] },
     "industry-directory": { required: ["title"], arrays: ["industries"] },
     "industry-method": { required: ["title"], arrays: ["steps"] },
