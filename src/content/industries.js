@@ -8,12 +8,14 @@ import seniorCareImage from "../assets/images/industry-senior-care.webp";
 import technologyImage from "../assets/images/industry-technology.webp";
 import industriesContextImage from "../assets/images/industries-context.jpg";
 import industriesHeroImage from "../assets/images/industries-hero.jpg";
-import americasFactoryLogo from "../assets/images/logo-americas-factory.webp";
-import fordLogo from "../assets/images/logo-ford.webp";
-import iclubLogo from "../assets/images/logo-iclub.webp";
-import ikeaLogo from "../assets/images/logo-ikea.webp";
-import jacobsLogo from "../assets/images/logo-jacobs.webp";
-import lidlLogo from "../assets/images/logo-lidl.webp";
+import cedarGroveLogo from "../assets/images/logo-cedar-grove.png";
+import keystoneLogo from "../assets/images/logo-keystone.png";
+import tidemarkLogo from "../assets/images/logo-tidemark.png";
+import lakeshoreLogo from "../assets/images/logo-lakeshore.png";
+import sunridgeLogo from "../assets/images/logo-sunridge.png";
+import halcyonLabsLogo from "../assets/images/logo-halcyon-labs.png";
+import cypressLogo from "../assets/images/logo-cypress.png";
+import forgelineLogo from "../assets/images/logo-forgeline.png";
 
 export const industries = [
     {
@@ -113,12 +115,14 @@ export const industries = [
 ];
 
 export const clientLogos = [
-    { name: "iClub", image: iclubLogo },
-    { name: "IKEA", image: ikeaLogo },
-    { name: "Jacobs", image: jacobsLogo },
-    { name: "Lidl", image: lidlLogo },
-    { name: "America's Factory Built Homes", image: americasFactoryLogo },
-    { name: "Ford", image: fordLogo }
+    { name: "Keystone Concrete Group", image: keystoneLogo },
+    { name: "Sunridge Hospitality Group", image: sunridgeLogo },
+    { name: "Lakeshore Health Partners", image: lakeshoreLogo },
+    { name: "Halcyon Labs", image: halcyonLabsLogo },
+    { name: "Cypress Grounds Management", image: cypressLogo },
+    { name: "Forgeline", image: forgelineLogo },
+    { name: "Cedar Grove Care Group", image: cedarGroveLogo },
+    { name: "Tidemark", image: tidemarkLogo }
 ];
 
 export const industryTickerItems = [
