@@ -100,14 +100,14 @@ export const h2bPageContent = {
                         label: "Per application in Group A",
                         description: "The recruitment period, DOL certification, and the I-129 petition carried through to approval. If your application does not land in Group A, this is never charged.",
                         highlighted: true,
-                        metrics: [{ value: "$3,500", label: "due after the draw", tone: "accent" }]
+                        metrics: [{ value: "$3,000", label: "due after the draw", tone: "accent" }]
                     },
                     {
                         eyebrow: "03",
                         title: "Consular stage",
                         label: "Per worker",
                         description: "Visa application for each worker who will travel, plus preparation for the embassy interview.",
-                        metrics: [{ value: "$150", label: "per head", tone: "teal" }]
+                        metrics: [{ value: "$150", label: "if requested", tone: "teal" }]
                     }
                 ]
             },
