@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-landscaping-detail.png";
 export default {
     slug: "landscaping",
     breadcrumb: "Landscaping & grounds",
+    metadata: {
+        title: "Landscaping H-2B Visa Programs | Corvell Immigration",
+        description:
+            "Recurring H-2B programs for landscaping and grounds employers, run on your season calendar so crews clear before the growing season opens."
+    },
     blocks: [
         {
             type: "industry-hero",

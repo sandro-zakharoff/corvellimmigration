@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { defaultSiteUrl } from "../shared/seo.js";
 
 dotenv.config();
 
@@ -28,7 +29,7 @@ const requiredSmtpValues = {
 export const config = {
     host: process.env.SERVER_HOST || "127.0.0.1",
     port: parsePort(process.env.SERVER_PORT, 5174),
-    siteUrl: process.env.SITE_URL || "https://corvellimmigration.com",
+    siteUrl: process.env.SITE_URL || defaultSiteUrl,
     smtp: {
         ...smtp,
         missing: Object.keys(requiredSmtpValues).filter((name) => !requiredSmtpValues[name])

@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-food-processing-detail.we
 export default {
     slug: "food-processing",
     breadcrumb: "Food & seafood processing",
+    metadata: {
+        title: "Food & Seafood Processing Immigration: H-2B & EB-3 | Corvell Immigration",
+        description:
+            "H-2B crews for the seasonal peak and EB-3 green cards for permanent line roles, so food and seafood plants stay staffed year-round."
+    },
     blocks: [
         {
             type: "industry-hero",

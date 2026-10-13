@@ -6,6 +6,11 @@ import manufacturingImage from "../../../assets/images/industry-manufacturing.we
 export default {
     slug: "august-2026-employer-immigration-brief",
     breadcrumb: "August 2026 Brief",
+    metadata: {
+        title: "The August 2026 Employer Immigration Brief | Corvell Immigration",
+        description:
+            "Fees, processing times, the Visa Bulletin, and policy changes this quarter — and what each means for PERM, EB-2, EB-3, H-1B, and H-2B filings."
+    },
     blocks: [
         {
             type: "insight-header",

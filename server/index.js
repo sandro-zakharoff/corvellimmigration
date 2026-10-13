@@ -29,9 +29,17 @@ app.use("/api/guides", createGuideRouter(guideOutbox));
 app.use("/api/careers/date", createCareersRouter());
 
 if (existsSync(distDirectory)) {
-    app.use(express.static(distDirectory));
+    app.get(/^(?!\/api(?:\/|$)).+\/$/, (request, response) => {
+        const query = request.originalUrl.slice(request.path.length);
+        response.redirect(301, `/${request.path.replace(/^\/+|\/+$/g, "")}${query}`);
+    });
+    app.use(express.static(distDirectory, { redirect: false }));
     app.get(/^(?!\/api(?:\/|$)).*/, (request, response) => {
-        response.sendFile(join(distDirectory, "index.html"));
+        response.sendFile(`${request.path.slice(1)}.html`, { root: distDirectory }, (error) => {
+            if (error && !response.headersSent) {
+                response.status(404).sendFile("404.html", { root: distDirectory });
+            }
+        });
     });
 }
 

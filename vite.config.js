@@ -1,8 +1,9 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
+import { defaultSiteUrl } from "./shared/seo.js";
 
 export default defineConfig(({ mode }) => {
-    const environment = loadEnv(mode, process.cwd(), ["DEV_PORT", "SERVER_PORT"]);
+    const environment = loadEnv(mode, process.cwd(), ["DEV_PORT", "SERVER_PORT", "SITE_URL"]);
     const clientPort = Number(environment.DEV_PORT || 5173);
     const serverPort = Number(environment.SERVER_PORT || 5174);
 
@@ -14,6 +15,9 @@ export default defineConfig(({ mode }) => {
 
     return {
         plugins: [react()],
+        define: {
+            "import.meta.env.SITE_URL": JSON.stringify(environment.SITE_URL || defaultSiteUrl)
+        },
         server: {
             host: "127.0.0.1",
             port: clientPort,

@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-technology-detail.png";
 export default {
     slug: "technology",
     breadcrumb: "Technology",
+    metadata: {
+        title: "Tech Immigration: H-1B & EB-2 for Engineers | Corvell Immigration",
+        description:
+            "H-1B petitions to get engineers and specialists working now, and EB-2 green cards to make them permanent — one firm from the first petition to the green card."
+    },
     blocks: [
         {
             type: "industry-hero",

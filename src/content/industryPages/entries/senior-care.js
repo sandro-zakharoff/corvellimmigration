@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-senior-care-detail.png";
 export default {
     slug: "senior-care",
     breadcrumb: "Senior & long-term care",
+    metadata: {
+        title: "Senior Care Immigration: Schedule A & EB-3 | Corvell Immigration",
+        description:
+            "Schedule A green cards for nurses and EB-3 for LPNs, aides, and direct-care staff in long-term care, with credentialing managed so it never holds a hire up."
+    },
     blocks: [
         {
             type: "industry-hero",

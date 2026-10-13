@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-healthcare-detail.png";
 export default {
     slug: "healthcare",
     breadcrumb: "Healthcare",
+    metadata: {
+        title: "Healthcare Immigration: Schedule A & EB-3 | Corvell Immigration",
+        description:
+            "Schedule A green cards for registered nurses and physical therapists without the PERM labor-market test, plus EB-3 for allied roles and credentialing support."
+    },
     blocks: [
         {
             type: "industry-hero",

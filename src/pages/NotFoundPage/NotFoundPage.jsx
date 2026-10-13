@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import PageMetadata from "../../components/app/PageMetadata/PageMetadata";
 import TextBlock from "../../components/common/TextBlock/TextBlock";
+import { notFoundMetadata } from "../../content/metadata";
 import "./NotFoundPage.css";
 
 function NotFoundPage() {
     return (
         <main className="not-found" id="main-content">
+            <PageMetadata {...notFoundMetadata} />
             <div className="not-found__inner container">
                 <TextBlock className="not-found__code">404</TextBlock>
                 <h1 className="not-found__title">This page could not be found.</h1>

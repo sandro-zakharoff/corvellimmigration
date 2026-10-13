@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-hospitality-detail.png";
 export default {
     slug: "hospitality",
     breadcrumb: "Hospitality",
+    metadata: {
+        title: "Hospitality Workforce Immigration: H-2B & EB-3 | Corvell Immigration",
+        description:
+            "H-2B seasonal staff and EB-3 permanent hires for hotels, resorts, and restaurants, filed so the floor, kitchen, and front desk are covered before the rush."
+    },
     blocks: [
         {
             type: "industry-hero",

@@ -4,6 +4,11 @@ import testimonialImage from "../../../assets/images/testimonial-denise-okafor.w
 export default {
     slug: "construction",
     breadcrumb: "Construction",
+    metadata: {
+        title: "Construction Workforce Immigration: H-2B & EB-3 | Corvell Immigration",
+        description:
+            "H-2B temporary crews and EB-3 permanent tradespeople for construction firms, filed backward from your date of need so headcount is on the job when work begins."
+    },
     blocks: [
         {
             type: "industry-hero",

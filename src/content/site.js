@@ -22,9 +22,9 @@ export const footerNavigation = [
     {
         title: "Services",
         links: [
-            { label: "EB-2", path: "/services/" },
-            { label: "EB-3", path: "/services/" },
-            { label: "H-1B", path: "/services/" },
+            { label: "EB-2", path: "/services" },
+            { label: "EB-3", path: "/services" },
+            { label: "H-1B", path: "/services" },
             { label: "H-2B", path: "/h-2b" },
             { label: "All visas", path: "/services" }
         ]

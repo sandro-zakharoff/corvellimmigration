@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
+import PageMetadata from "../../components/app/PageMetadata/PageMetadata";
 import IndustryDetail from "../../components/industries/IndustryDetail/IndustryDetail";
 import { getIndustryPage } from "../../content/industryPages";
+import { getIndustryMetadata } from "../../content/metadata";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 function IndustryDetailPage() {
@@ -13,6 +15,7 @@ function IndustryDetailPage() {
 
     return (
         <main id="main-content">
+            <PageMetadata {...getIndustryMetadata(industry)} />
             <IndustryDetail industry={industry} />
         </main>
     );

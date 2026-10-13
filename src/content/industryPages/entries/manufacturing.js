@@ -3,6 +3,11 @@ import heroImage from "../../../assets/images/industry-manufacturing-detail.png"
 export default {
     slug: "manufacturing",
     breadcrumb: "Manufacturing",
+    metadata: {
+        title: "Manufacturing Immigration: EB-3 & PERM | Corvell Immigration",
+        description:
+            "EB-3 green cards for machinists, welders, and production staff. We run PERM end to end so you build a skilled manufacturing workforce that stays."
+    },
     blocks: [
         {
             type: "industry-hero",

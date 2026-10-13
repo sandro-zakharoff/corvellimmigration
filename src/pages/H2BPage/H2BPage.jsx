@@ -1,12 +1,12 @@
 import PageBlocks from "../../components/common/PageBlocks/PageBlocks";
 import PageMetadata from "../../components/app/PageMetadata/PageMetadata";
 import { h2bPageBlocks } from "../../content/pages";
-import { h2bPageMetadata } from "../../content/h2b";
+import { pageMetadata } from "../../content/metadata";
 
 function H2BPage() {
     return (
         <main id="main-content">
-            <PageMetadata {...h2bPageMetadata} />
+            <PageMetadata {...pageMetadata.h2b} />
             <PageBlocks blocks={h2bPageBlocks} />
         </main>
     );

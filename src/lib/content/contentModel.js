@@ -406,6 +406,16 @@ export function createContentCollection(modules, directory) {
             fail(`${location}.breadcrumb`, "заполните короткое название страницы");
         }
 
+        if (entry.metadata !== undefined) {
+            requireObject(entry.metadata, `${location}.metadata`);
+
+            for (const field of ["title", "description"]) {
+                if (typeof entry.metadata[field] !== "string" || !entry.metadata[field].trim()) {
+                    fail(`${location}.metadata.${field}`, "заполните SEO-заголовок и описание страницы");
+                }
+            }
+        }
+
         slugs.add(entry.slug);
         validateBlocks(entry.blocks, `${location}.blocks`);
         return entry;
