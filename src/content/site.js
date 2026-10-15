@@ -1,7 +1,5 @@
 export const mainNavigation = [
     { label: "Home", path: "/" },
-    { label: "About us", path: "/about" },
-    { label: "Team", path: "/team" },
     { label: "Services", path: "/services", activePaths: ["/h-2b"] },
     { label: "Industries", path: "/industries" },
     { label: "Insights", path: "/insights" },
@@ -13,8 +11,6 @@ export const footerNavigation = [
     {
         title: "Firm",
         links: [
-            { label: "About us", path: "/about" },
-            { label: "Team", path: "/team" },
             { label: "Careers", path: "/careers" },
             { label: "Contact", path: "/contact" }
         ]
