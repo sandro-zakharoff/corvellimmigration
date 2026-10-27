@@ -45,7 +45,8 @@ export function createGuideOutbox({
     logger = console,
     autoProcess = true,
     recipientLimit = 4,
-    maxJobs = 2000
+    maxJobs = 2000,
+    messageIdDomain = "example.com"
 } = {}) {
     const jobs = new Map();
     const pendingWrites = new Set();
@@ -141,7 +142,7 @@ export function createGuideOutbox({
 
             try {
                 const guide = getGuide(job.guideId);
-                const messageId = `<guide-${job.id}-${kind}@corvellimmigration.com>`;
+                const messageId = `<guide-${job.id}-${kind}@${messageIdDomain}>`;
 
                 if (kind === "administrator") {
                     await mailer.sendGuideAdministratorMessage(job.data, guide, messageId);

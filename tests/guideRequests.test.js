@@ -409,7 +409,7 @@ test("download service recovery retries only the queued client email", async (t)
     assert.equal(completed.data, undefined);
     assert.equal(messages.length, 2);
     assert.deepEqual(messages[1].to, { address: data.workEmail });
-    assert.equal(messages[1].messageId, `<guide-${data.requestId}-client@corvellimmigration.com>`);
+    assert.equal(messages[1].messageId, `<guide-${data.requestId}-client@example.com>`);
     assert.equal(new URL(downloadHref(messages[1].html)).pathname, "/api/guides/download/eb-2");
     await outbox.processPending();
     assert.equal(messages.length, 2);

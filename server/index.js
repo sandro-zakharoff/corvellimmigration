@@ -13,7 +13,7 @@ import { createGuideDownloads } from "./guideDownloads.js";
 const app = express();
 const guideDownloads = createGuideDownloads({ siteUrl: config.siteUrl });
 const mailer = createMailer(config.smtp, undefined, { guideDownloads });
-const guideOutbox = createGuideOutbox({ mailer });
+const guideOutbox = createGuideOutbox({ mailer, messageIdDomain: new URL(config.siteUrl).hostname });
 const currentDirectory = dirname(fileURLToPath(import.meta.url));
 const distDirectory = join(currentDirectory, "..", "dist");
 
