@@ -134,8 +134,8 @@ test("H-2B is a standalone page composed from reusable site blocks", async (cont
             assert.match(html, /image-hero--image-right/);
             assert.match(html, /image-hero--prominent/);
             assert.match(html, /href="\/contact"[^>]*>Book a consultation<\/a>/);
-            assert.match(html, /href="mailto:hello@corvellimmigration\.com"[^>]*>hello@corvellimmigration\.com<\/a>/);
-            assert.ok(renderedText(html).includes("Or email hello@corvellimmigration.com"));
+            assert.match(html, /href="mailto:hello@example\.com"[^>]*>hello@example\.com<\/a>/);
+            assert.ok(renderedText(html).includes("Or email hello@example.com"));
             const hero = { image: "/example.jpg", imageAlt: "Example", title: "Shared hero", titleParts: [{ text: "Shared hero" }] };
             assert.equal(render([{ type: "image-hero", ...hero }]), render([{ type: "industries-hero", ...hero }]));
             const legacyBanner = render([{ type: "action-banner", title: "Contact", link: { label: "Write", path: "/contact" } }]);

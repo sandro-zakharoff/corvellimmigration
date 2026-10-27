@@ -72,14 +72,14 @@ export const careersPageContent = {
                 },
                 application: {
                     prefix: "To apply, send your resume and a short note to ",
-                    email: "careers@corvellimmigration.com"
+                    email: "careers@example.com"
                 }
             }
         ],
         note: {
             emphasis: "We're always glad to hear from strong immigration professionals.",
             description:
-                "Send your resume to careers@corvellimmigration.com and tell us what you'd want to work on — we keep good candidates on file and post new roles here as they open."
+                "Send your resume to careers@example.com and tell us what you'd want to work on — we keep good candidates on file and post new roles here as they open."
         }
     }
 };
