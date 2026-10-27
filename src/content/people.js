@@ -63,7 +63,7 @@ export const attorneys = [
     {
         name: "Olga Prygoda",
         role: "Attorney",
-        position: "Managing Attorney",
+        position: "Attorney",
         slug: "olga-prygoda",
         image: olgaImage,
         biography: [
@@ -84,7 +84,7 @@ export const attorneys = [
     {
         name: "Gabriela Reyes",
         role: "Attorney",
-        position: "Managing Attorney",
+        position: "Attorney",
         slug: "gabriela-reyes",
         image: gabrielaImage,
         biography: [

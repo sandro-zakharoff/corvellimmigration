@@ -1,4 +1,4 @@
-import heroImage from "../assets/images/hero-employment-immigration.webp";
+import heroImage from "../assets/images/hero-employment-immigration.png";
 
 export const homePageContent = {
     hero: {
