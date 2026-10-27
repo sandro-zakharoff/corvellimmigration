@@ -96,12 +96,12 @@ test("H-2B is a standalone page composed from reusable site blocks", async (cont
         await context.test("amounts, filing windows and the original intake wording are preserved", () => {
             assert.deepEqual(rows.flatMap((row) => row.metrics.map((metric) => text(metric.value))), [
                 "6–8 wks", "Jan 1–3", "Jul 3–5", "33,000", "April", "15 days", "Per head",
-                "$1,500", "$3,500", "$150", "$0", "$1,330", "$205", "5 min", "0 min", "10 min"
+                "$1,500", "$3,000", "$150", "$0", "$1,330", "$205", "5 min", "0 min", "10 min"
             ]);
             assert.deepEqual(rows.flatMap((row) => row.metrics.map((metric) => text(metric.label))), [
                 "current DOL wait", "for April 1 starts", "for October 1 starts", "visas per half-year",
                 "usual opening, summer season", "15 business days on premium processing", "the only stage that scales with crew size",
-                "due when we file", "due after the draw", "per head", "no filing fee", "per petition · $910 small employer", "per head",
+                "due when we file", "due after the draw", "if requested", "no filing fee", "per petition · $910 small employer", "per head",
                 "", "nothing needed from you here", ""
             ]);
             assert.equal(text(sections[2].title), "Ten minutes on your side.");
