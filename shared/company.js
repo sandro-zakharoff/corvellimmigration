@@ -1,6 +1,6 @@
 export const contactDetails = {
-    address: ["1221 Brickell Avenue, Suite 900", "Miami, FL 33131"],
-    phone: "+1 (754) 757-4693",
-    phoneHref: "+17547574693",
+    address: ["777 Brickell Ave", "Suite 500", "Miami, FL 33131"],
+    phone: "+1 (754) 704-2090",
+    phoneHref: "+17547042090",
     email: "hello@corvellimmigration.com"
 };
